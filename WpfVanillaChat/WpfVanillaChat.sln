@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfVanillaChat", "WpfVanillaChat\WpfVanillaChat.csproj", "{02487ED0-BB27-4A0D-BC66-678F17CDA19E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanillaServer", "VanillaServer\VanillaServer.csproj", "{46E4754B-B009-4154-B477-AEB227073BB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02487ED0-BB27-4A0D-BC66-678F17CDA19E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02487ED0-BB27-4A0D-BC66-678F17CDA19E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02487ED0-BB27-4A0D-BC66-678F17CDA19E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02487ED0-BB27-4A0D-BC66-678F17CDA19E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46E4754B-B009-4154-B477-AEB227073BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E4754B-B009-4154-B477-AEB227073BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E4754B-B009-4154-B477-AEB227073BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E4754B-B009-4154-B477-AEB227073BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8D3ED6E-49FB-4B6C-8DF3-57DA684F11DE}
+	EndGlobalSection
+EndGlobal

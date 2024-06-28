@@ -1,0 +1,14 @@
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\obj\Debug\net8.0\VanillaServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\obj\Debug\net8.0\VanillaServer.AssemblyInfoInputs.cache
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\obj\Debug\net8.0\VanillaServer.AssemblyInfo.cs
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\obj\Debug\net8.0\VanillaServer.csproj.CoreCompileInputs.cache
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\bin\Debug\net8.0\VanillaServer.exe
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\bin\Debug\net8.0\VanillaServer.deps.json
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\bin\Debug\net8.0\VanillaServer.runtimeconfig.json
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\bin\Debug\net8.0\VanillaServer.dll
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\bin\Debug\net8.0\VanillaServer.pdb
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\obj\Debug\net8.0\VanillaServer.dll
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\obj\Debug\net8.0\refint\VanillaServer.dll
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\obj\Debug\net8.0\VanillaServer.pdb
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\obj\Debug\net8.0\VanillaServer.genruntimeconfig.cache
+C:\Users\qwe\WpfChat\WpfVanillaChat\VanillaServer\obj\Debug\net8.0\ref\VanillaServer.dll
