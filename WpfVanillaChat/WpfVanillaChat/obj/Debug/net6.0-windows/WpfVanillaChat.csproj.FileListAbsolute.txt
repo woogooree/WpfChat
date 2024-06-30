@@ -36,3 +36,4 @@ C:\Users\qwe\WpfChat\WpfVanillaChat\WpfVanillaChat\bin\Debug\net6.0-windows\Syst
 C:\Users\qwe\WpfChat\WpfVanillaChat\WpfVanillaChat\bin\Debug\net6.0-windows\System.Runtime.InteropServices.WindowsRuntime.dll
 C:\Users\qwe\WpfChat\WpfVanillaChat\WpfVanillaChat\bin\Debug\net6.0-windows\de\MahApps.Metro.resources.dll
 C:\Users\qwe\WpfChat\WpfVanillaChat\WpfVanillaChat\obj\Debug\net6.0-windows\WpfVanil.6F64025C.Up2Date
+C:\Users\qwe\WpfChat\WpfVanillaChat\WpfVanillaChat\obj\Debug\net6.0-windows\WpfVanillaChat.sourcelink.json

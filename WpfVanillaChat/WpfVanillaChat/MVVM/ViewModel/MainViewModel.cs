@@ -92,12 +92,12 @@ namespace WpfVanillaChat.MVVM.ViewModel
             await LoadMessages();
         }
 
-        /* Chat Load&Send */
+        /* Chat Load&Send 1:N */
         private async Task LoadMessages()
         {
-            if (Users.Count == 2)
+            if (Users.Count > 1)
             {
-                var roomname = GetRoomName(Users[0].Username, Users[1].Username);
+                var roomname = GetRoomName(Users.Select(u => u.Username).ToList());
                 var chats = await _firebaseHelper.LoadMessagesAsync(roomname);
                 Application.Current.Dispatcher.Invoke(() =>
                 {
@@ -112,10 +112,13 @@ namespace WpfVanillaChat.MVVM.ViewModel
 
         private async Task SendMessage()
         {
-            var roomname = GetRoomName(Users[0].Username, Users[1].Username);
-            await _server.SendMessageToServer(Chat, roomname);
-            await _firebaseHelper.SaveMessageAsync(roomname, Username, Chat);
-            Chat = string.Empty; // 메시지 전송 후 입력창 비우기
+            if (Users.Count > 1)
+            {
+                var roomname = GetRoomName(Users.Select(u => u.Username).ToList());
+                await _server.SendMessageToServer(Chat, roomname);
+                await _firebaseHelper.SaveMessageAsync(roomname, Username, Chat);
+                Chat = string.Empty; // 메시지 전송 후 입력창 비우기
+            }
         }
 
         /* Action */
@@ -139,6 +142,7 @@ namespace WpfVanillaChat.MVVM.ViewModel
             if (_server.PacketReader != null)
             {
                 var msg = _server.PacketReader.ReadMessage();
+                
                 Application.Current.Dispatcher.Invoke(() => Chats.Add(msg));
             }
         }
@@ -164,11 +168,11 @@ namespace WpfVanillaChat.MVVM.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private string GetRoomName(string user1, string user2)
+        private string GetRoomName(List<string> usernames)
         {
-            var users = new List<string> { user1, user2 };
+            var users = usernames;
             users.Sort();
-            return $"ChatRoom_{users[0]}_{users[1]}";
+            return $"ChatRoom_{string.Join("_", users)}";
         }
 
         //Profiles = new ObservableCollection<string>();
@@ -187,46 +191,14 @@ namespace WpfVanillaChat.MVVM.ViewModel
 
         //Messages.Add(new MessageModel
         //{
-        //    Username = "강동우",
+        //    Username = "",
         //    UsernameColor = "#409aff",
-        //    ImageSource = "https://i.imgur.com/yMWvLXd.png",
+        //    ImageSource = "",
         //    Message = "Test",
         //    Time = DateTime.Now,
         //    IsNativeOrigin = false,
         //    firstMessage = true,
         //});
 
-        //for (int i = 0; i < 4; i++)
-        //{
-        //    Messages.Add(new MessageModel
-        //    {
-        //        Username = "정영도",
-        //        UsernameColor = "#409aff",
-        //        ImageSource = "https://i.imgur.com/yMWvLXd.png",
-        //        Message = "Test",
-        //        Time = DateTime.Now,
-        //        IsNativeOrigin = true,
-        //    });
-        //}
-
-        //Messages.Add(new MessageModel
-        //{
-        //    Username = "박승준",
-        //    UsernameColor = "#409aff",
-        //    ImageSource = "https://i.imgur.com/yMWvLXd.png",
-        //    Message = "Last",
-        //    Time = DateTime.Now,
-        //    IsNativeOrigin = true,
-        //});
-
-        //for (int i = 0; i < 5; i++)
-        //{
-        //    Contacts.Add(new ContactModel
-        //    {
-        //        Username = $"강동우 {i}",
-        //        ImageSource = "https://i.imgur.com/yMWvLXd.png",
-        //        Messages = Messages,
-        //    }); 
-        //}
     }
 }

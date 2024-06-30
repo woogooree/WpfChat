@@ -22,5 +22,6 @@ namespace WpfVanillaChat.Net.IO
             _ns.Read(msgBuffer, 0, length);
             return Encoding.ASCII.GetString(msgBuffer);
         }
+        
     }
 }
